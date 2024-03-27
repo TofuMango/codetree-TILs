@@ -41,4 +41,4 @@ for i in range(2):
     for j in range(4):
         sum1 += arr_2d[i][j]
 average = sum1 / 8
-print(average)
+print(round(average,1))
