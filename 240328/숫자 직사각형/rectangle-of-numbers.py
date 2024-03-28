@@ -32,15 +32,23 @@
 #         print(elem, end=" ")
 #     print()
 
-n = list(map(int, input().split()))
+# list ver
+# n = list(map(int, input().split()))
+# arr_2d = [
+#     [0 for _ in range(n[1])]
+#     for _ in range(n[0])
+# ]
+
+# tuple ver
+n, m = tuple(map(int, input().split()))
 arr_2d = [
-    [0 for _ in range(n[1])]
-    for _ in range(n[0])
+    [0 for _ in range(m)]
+    for _ in range(n)
 ]
 
 num = 1
-for i in range(n[0]):
-    for j in range(n[1]):
+for i in range(n):
+    for j in range(m):
         arr_2d[i][j] = num
         num += 1
 
