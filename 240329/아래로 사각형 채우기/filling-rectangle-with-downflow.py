@@ -31,12 +31,6 @@ arr_2d = [
     for _ in range(n)
 ]
 
-# 일단... 배열[n][0]에 각각차례로 12345 입력받아야함.
-# 입력받고나서 주어진 값만큼 증가시키는 코드 짜기
-
-a = 1
-b = 1
-
 for i in range(n):
     for j in range(n):
         arr_2d[i][j] = i + 1 + j * n
