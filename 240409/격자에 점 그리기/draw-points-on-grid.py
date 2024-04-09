@@ -5,12 +5,9 @@ answer = [
     for _ in range(n)
 ]
 
-count = 1
-
-for i in range(m):
+for i in range(1, m+1):
     r, c = list(map(int, input().split()))
-    answer[r-1][c-1] = count
-    count += 1
+    answer[r-1][c-1] = i
 
 for row in range(n):
     for col in range(n):
