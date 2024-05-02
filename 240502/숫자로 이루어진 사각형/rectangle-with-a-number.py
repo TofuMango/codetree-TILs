@@ -6,10 +6,10 @@ def square(N):
     num = 1
     for row in range(N):
         for col in range(N):
-            if(num > 9):
-                num = 1
             print(num, end=" ")
             num += 1
+            if(num > 9):
+                num = 1
         print() 
         
 # 출력
