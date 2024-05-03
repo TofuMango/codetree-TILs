@@ -2,9 +2,7 @@ a, b = tuple(map(int, input().split()))
 
 # 조건1
 def findNum369(n):
-    n1 = n % 10
-    n2 = n // 10
-    return n1 == 3 or n1 == 6 or n1 == 9 or n2 == 3 or n2 == 6 or n2 == 9
+    return n % 10 == 3 or n % 10 == 6 or n % 10 == 9
 # 조건2
 def findNumber3(n):
     return n % 3 == 0 or findNum369(n)
