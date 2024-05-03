@@ -8,7 +8,7 @@ def car(a,b,c):
     if b == '-':
         return a - c
     if b == '/':
-        return a / c
+        return a // c
     if b == '*':
         return a * c
 
