@@ -11,5 +11,6 @@ def car(a,b,c):
         return int(a / c)
     if b == '*':
         return a * c
+    return False
 
 print(a, o, c, "=", car(a,o,c))
