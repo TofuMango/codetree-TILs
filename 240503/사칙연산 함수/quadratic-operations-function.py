@@ -5,15 +5,13 @@ def car(a,b,c):
     c = int(c)
     if b == '+':
         return a + c
-    if b == '-':
+    elif b == '-':
         return a - c
-    if b == '/':
+    elif b == '/':
         return int(a / c)
-    if b == '*':
+    elif b == '*':
         return a * c
-    return False
+    else:
+        print("False")
 
-if car(a,o,c) == False:
-    print("False")
-else:
-    print(a, o, c, "=", car(a,o,c))
+print(a, o, c, "=", car(a,o,c))
