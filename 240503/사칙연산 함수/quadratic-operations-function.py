@@ -13,4 +13,7 @@ def car(a,b,c):
         return a * c
     return False
 
-print(a, o, c, "=", car(a,o,c))
+if car(a,o,c) == False:
+    print("False")
+else:
+    print(a, o, c, "=", car(a,o,c))
