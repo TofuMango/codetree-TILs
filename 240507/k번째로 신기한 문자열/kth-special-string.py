@@ -13,7 +13,7 @@ tList = []
 # 문자열T로 시작하는 단어들을 배열ap에 저장
 for i in arrWord:
     for j in i:
-        if j[0:2] == T:
+        if j[0:len(T)] == T:
             tList.append(j)
 
 print(tList[k-1])
