@@ -9,7 +9,9 @@ for _ in range(5):
     CN.append(CodeName(codename, score))
 
 minScore = 1000000
+minCodename = ""
 for i in CN:
     if i.score < minScore:
         minScore = i.score
-        print(i.codename, minScore)
+        minCodename = i.codename
+print(minCodename, minScore)
