@@ -4,7 +4,7 @@ class Student:
 n = int(input())
 students = []
 for _ in range(n):
-    name, sub1, sub2, sub3 = input().split()
+    name, sub1, sub2, sub3 = tuple(input().split())
     students.append(Student(name, int(sub1), int(sub2), int(sub3)))
 students.sort(key=lambda x: x.s1 + x.s2 + x.s3)
 for student in students:
