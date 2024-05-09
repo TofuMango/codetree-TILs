@@ -11,7 +11,7 @@ n = int(input())
 # 점 객체 선언 후 입력받기
 spots = []
 for i in range(n):
-    x, y = map(int, input().split())
+    x, y = tuple(map(int, input().split()))
     spots.append(Spot(i+1, x, y))
 
 # 멘하탄 거리와 인덱스를 기준으로 정렬
