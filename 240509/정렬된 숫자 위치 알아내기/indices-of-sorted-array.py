@@ -1,21 +1,31 @@
-# 수열의 길이 n
+# 클래스 선언
+class Number:
+    def __init__(self, number, index):
+        self.number, self.index = number, index
+
+
+# 변수 선언 및 입력
 n = int(input())
-# 수열 입력받기
-numList = list(map(int, input().split()))
-sortNum = sorted(numList)
+numbers = []
+arr = list(map(int, input().split()))
+numbers = [
+    Number(num, i)
+    for i, num in enumerate(arr)
+]
+answer = [
+    0 for _ in range(n)
+]
 
-# 인덱스 매핑하기
-index_map = {}
-for idx, value in enumerate(sortNum):
-    if value not in index_map:
-        index_map[value] = [idx + 1]
-    else:
-        index_map[value].append(idx + 1)
+# Custom Comparator를 활용한 정렬
+numbers.sort(key=lambda x: (x.number, x.index))
 
-# index와 기존 수열 비교하며 출력
-for value in numList:
-    print(index_map[value][0], end=" ")
-    index_map[value].pop(0)  # 이미 사용한 인덱스는 제거
+# 정렬된 숫자들의 원래 인덱스를 활용한 정답 배열 저장
+for i, number in enumerate(numbers):
+    answer[number.index] = i + 1 # 인덱스 보정
+
+# 출력
+for i in range(n):
+    print(answer[i], end = ' ')
 
 # 수열의 길이 n
 # n = int(input())
