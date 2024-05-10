@@ -1,3 +1,4 @@
+# 시간차 많이 안날때
 day, hour, miniute = 11, 11, 11
 a, b, c = tuple(map(int, input().split()))
 elapsed_time = 0
@@ -21,3 +22,15 @@ while True:
         day += 1
         hour = 0
         miniute = 0
+# 많이 날때
+# # 변수 선언 및 입력
+# a, b, c = tuple(map(int, input().split()))
+
+# # 차이를 계산.
+# diff = (a * 24 * 60 + b * 60 + c) - (11 * 24 * 60 + 11 * 60 + 11)
+
+# # 출력
+# if diff < 0:
+#     print(-1)
+# else:
+#     print(diff)
