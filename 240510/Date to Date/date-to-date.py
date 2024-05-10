@@ -1,5 +1,5 @@
 month, day, end_month, end_day = tuple(map(int, input().split()))
-elapsed_day = 0
+elapsed_day = 1
 # 윤년X 기준 2월은 28일까지
 num_of_days = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
