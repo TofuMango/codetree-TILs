@@ -12,4 +12,4 @@ while True:
     if day> num_of_days[month]:
         month+=1
         day = 1
-pritn(elapsed_day)
+print(elapsed_day)
