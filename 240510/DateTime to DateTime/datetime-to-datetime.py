@@ -21,5 +21,5 @@ while True:
         hour = 0
         miniute = 0
 
-if elapsed_time != 0:
+if elapsed_time != False:
     print(elapsed_time)
