@@ -20,5 +20,6 @@ while True:
         day += 1
         hour = 0
         miniute = 0
-    
-print(elapsed_time)
+
+if elapsed_time != 0:
+    print(elapsed_time)
