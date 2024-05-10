@@ -4,7 +4,8 @@ elapsed_time = 0
 
 while True:
     if a < day and b < hour and c < miniute:
-        print(-1)
+        elapsed_time = -1
+        print(elapsed_time)
         break 
     if day == a and hour == b and miniute == c:
         break
@@ -21,5 +22,5 @@ while True:
         hour = 0
         miniute = 0
 
-if elapsed_time != False:
+if elapsed_time != -1 :
     print(elapsed_time)
