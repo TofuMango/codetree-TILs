@@ -1,18 +1,26 @@
-# 입력 받기
-a, b = map(int, input().split())
+MAX_DIGIT = 30
+
+# 변수 선언 및 입력:
+a, b = tuple(map(int, input().split()))
 n = input()
 
-# a진수를 10진수로 변환
-decimal = 0
-for i, digit in enumerate(n[::-1]):
-    decimal += int(digit, a) * a ** i
+digits = []
 
-# 10진수를 b진수로 변환
-digits = "0123456789"
-result = ""
-while decimal > 0:
-    result = digits[decimal % b] + result
-    decimal //= b
+   
+# 십진수로 변환
+num = 0
+for ch in n:
+    num = num * a + (ord(ch) - ord('0'))
 
-# 결과 출력
-print(result if result else "0")
+# b진수로 변환
+while True:
+    if num < b:
+        digits.append(num)
+        break
+    
+    digits.append(num % b)
+    num //= b
+
+# 진수 배열을 뒤집어 b진수를 출력
+for digit in digits[::-1]:
+    print(digit, end="")
