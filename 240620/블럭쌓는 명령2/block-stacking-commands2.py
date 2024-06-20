@@ -6,6 +6,6 @@ for i in range(n):
 # k번 만큼 반복
 for i in range(k):
     a, b = tuple(map(int, input().split()))
-    for num in range(b-a+1):
-        res[a+num]+=1
+    for i in range(a-1, b):  # 0-indexed 배열에 맞게 범위 조정
+        block_count[i] += 1
 print(max(res))
