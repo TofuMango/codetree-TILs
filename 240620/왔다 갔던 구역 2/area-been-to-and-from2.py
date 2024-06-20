@@ -1,5 +1,5 @@
-offerset = 100
-max_space = 200
+offerset = 300
+max_space = 600
 n = int(input())
 segment = [
     tuple(input().split())
