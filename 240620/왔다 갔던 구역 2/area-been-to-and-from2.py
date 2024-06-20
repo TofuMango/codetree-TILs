@@ -11,12 +11,12 @@ for x, y in segment:
     x = int(x)
     # 만약 y가 R이라면 
     if y == 'R':
-        for i in range(x):
+        for i in range(1, x):
             res[offerset+i]+=1
         offerset+=x
             
     if y == 'L':
-        for i in range(x):
+        for i in range(1, x):
             res[offerset-i]+=1
         offerset-=x
 cnt = 0
