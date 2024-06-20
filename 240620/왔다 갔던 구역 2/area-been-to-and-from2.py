@@ -13,12 +13,12 @@ for x, y in segment:
     if y == 'R':
         for i in range(x):
             res[offerset+i]+=1
-        offerset+=1
+        offerset+=x
             
     if y == 'L':
         for i in range(x):
             res[offerset-i]+=1
-        offerset-=1
+        offerset-=x
 cnt = 0
 for r in res:
     if r >= 2:
