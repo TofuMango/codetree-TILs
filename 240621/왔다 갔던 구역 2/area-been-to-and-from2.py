@@ -1,5 +1,5 @@
-offset = 1000
-max_space = 2000
+offset = 100
+max_space = 200
 
 # 입력
 n = int(input())
