@@ -1,4 +1,4 @@
-offerset = 1000
+offset = 1000
 max_space = 2000
 
 # 입력
@@ -8,6 +8,7 @@ n = int(input())
 cur = 0
 
 # 이동 정보 입력받기
+segments = []
 for _ in range(n):
     x, y = tuple(input().split())
     x = int(x)
@@ -19,8 +20,8 @@ for _ in range(n):
         section_right = cur
         # 현재값에 이동한만큼 빼줌(이동후 위치 저장)
         cur -= x
-
-    if y == 'R':
+    else:
+        # 오른쪽으로 이동할 경우 : cur ~ cur + distance까지 경로 이동
         section_left = cur
         section_right = cur + x
         cur += x
@@ -30,14 +31,15 @@ for _ in range(n):
 res = [0] * (max_space + 1)
 
 for x1, x2 in segments:
-    x = int(x)
     # OFFSET을 더해줌, 음수위치를 양수 위치로 전환
-	x1, x2 = x1 + OFFSET, x2 + OFFSET
+    x1, x2 = x1 + offset, x2 + offset
     for i in range(x1, x2):
-        res[i]+=1
+        res[i] += 1
+
 # 2번 이상 지나간 영역 칠하기
 cnt = 0
 for r in res:
     if r >= 2:
         cnt += 1
+
 print(cnt)
