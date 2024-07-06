@@ -8,18 +8,16 @@ check = [
     [0] * (maxSpace+1)
     for _ in range(maxSpace+1)
 ]
-cnt = 1
-for x1, y1, x2, y2 in squre:
+for index, (x1, y1, x2, y2) in enumerate(squre, start=1):
     x1, x2 = offset + x1, offset + x2
     y1, y2 = offset + y1, offset + y2 
     for i in range(x1, x2):
         for j in range(y1, y2):
-            check[i][j] = cnt
-    cnt += 1
+            check[i][j] = index
 
-cnt2 = 0
+cnt = 0
 for x in check:
     for y in x:
-        if y != cnt-1 and y != 0:
-            cnt2 += 1
-print(cnt2)
+        if y != index and y != 0:
+            cnt += 1
+print(cnt)
