@@ -1,4 +1,4 @@
-maxSpace = 100
+maxSpace = 1000000
 result = [0] * (2*maxSpace+1)
 cur = maxSpace
 w, b = 0, 0
