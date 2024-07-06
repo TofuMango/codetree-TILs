@@ -5,24 +5,27 @@ square = [
     for _ in range(2)
 ]
 check = [
-    [0] * (maxSpace+1)
-    for _ in range(maxSpace+1)
+    [0] * (maxSpace + 1)
+    for _ in range(maxSpace + 1)
 ]
-for index, (x1, y1, x2, y2) in enumerate(square, start = 1):
-    x1, y1 = offset+x1, offset+y1
-    x2, y2 = offset+x2, offset+y2
+
+# 사각형의 좌표 변환 및 매핑
+for index, (x1, y1, x2, y2) in enumerate(square, start=1):
+    x1, y1 = offset + x1, offset + y1
+    x2, y2 = offset + x2, offset + y2
     for i in range(x1, x2):
         for j in range(y1, y2):
             check[i][j] = index
 
+# 겹치는 영역의 최대 너비와 높이를 계산
 x_max = 0
 y_max = 0
 
 # x_max 계산
-for i in range(0, maxSpace+1):
+for i in range(0, maxSpace + 1):
     tmp = 0
-    for j in range(0, maxSpace+1):
-        if check[i][j] == 1:
+    for j in range(0, maxSpace + 1):
+        if check[i][j] == 1 and check[i][j] == check[i][j]:
             tmp += 1
         else:
             if x_max < tmp:
@@ -32,10 +35,10 @@ for i in range(0, maxSpace+1):
         x_max = tmp
 
 # y_max 계산
-for j in range(0, maxSpace+1):
+for j in range(0, maxSpace + 1):
     tmp = 0
-    for i in range(0, maxSpace+1):
-        if check[i][j] == 1:
+    for i in range(0, maxSpace + 1):
+        if check[i][j] == 1 and check[i][j] == check[i][j]:
             tmp += 1
         else:
             if y_max < tmp:
