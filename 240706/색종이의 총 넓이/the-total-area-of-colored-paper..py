@@ -11,6 +11,7 @@ check = [
 ]
 
 for x, y in paper:
+    x, y = x+offset, y+offset
     for i in range(x, x+8):
         for j in range(y, y+8):
             check[i][j] = 1
