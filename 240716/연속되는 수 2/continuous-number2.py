@@ -3,7 +3,7 @@ number = [0] * n
 for i in range(n):
     tmp = int(input())
     number[i] = tmp
-cnt = 0
+cnt = 1
 max_cnt = 0
 for i in range(n):
     cnt += 1
@@ -12,4 +12,4 @@ for i in range(n):
         if cnt > max_cnt:
             max_cnt = cnt
             cnt = 0
-print(max_cnt-1)
+print(max_cnt)
