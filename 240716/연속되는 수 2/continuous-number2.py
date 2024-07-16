@@ -1,19 +1,21 @@
+# 변수 선언 및 입력
 n = int(input())
-number = [0] * n
+arr = [
+	int(input())
+	for _ in range(n)
+]
+
+# 연속하여 동일한 숫자가 나오는 횟수를 구함
+# 그 중 최댓값을 갱신
+ans, cnt = 0, 0
 for i in range(n):
-    tmp = int(input())
-    number[i] = tmp
+	# Case 1 연속한 두 원소가 일치하면 +1
+	if i >= 1 and arr[i] == arr[i - 1]:
+		cnt += 1
+	# Case 2 일치하지 않으면 cnt 1
+	else:
+		cnt = 1
+	# ans와 현재 cnt 값 비교해서 큰수를 ans에 저장
+	ans = max(ans, cnt)
 
-cnt = 1  # 첫 번째 요소는 무조건 그룹에 포함되므로 1로 시작
-max_cnt = 0
-for i in range(1, n):  # 첫 번째 요소는 이미 처리했으므로 1부터 시작
-    if number[i] == number[i - 1]:
-        cnt += 1
-    else:
-        if cnt > max_cnt:
-            max_cnt = cnt
-        cnt = 1  # 새로운 그룹이 시작되므로 1로 초기화
-if cnt > max_cnt:  # 마지막 그룹이 최대 그룹일 수도 있으므로 확인
-    max_cnt = cnt
-
-print(max_cnt)
+print(ans)
