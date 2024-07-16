@@ -5,7 +5,7 @@ for i in range(n):
     number[i] = tmp
 cnt = 1
 max_cnt = 0
-for i in range(n):
+for i in range(1, n):
     cnt += 1
     # 그룹의 수..
     if number[i] == 0 or number[i] != number[i-1]:
