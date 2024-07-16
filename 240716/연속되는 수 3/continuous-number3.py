@@ -4,13 +4,12 @@ arr = [
     for _ in range(n)
 ]
 
-ans, cnt = 0, 0
-for i in range(n):
-    # i가 음수이거나, 음수이면서 연속하는 원소가 동일한 음수인 경우 +1
-    if arr[i] < 0 or (arr[i] < 0 and arr[i] == arr[i-1]):
+ans, cnt = 1, 1  # 첫 번째 숫자는 항상 포함되므로 1로 초기화
+for i in range(1, n):  # 두 번째 숫자부터 시작
+    if (arr[i] > 0 and arr[i - 1] > 0) or (arr[i] < 0 and arr[i - 1] < 0):  # 부호가 동일한지 확인
         cnt += 1
-    # 그렇지 않으면 cnt를 1로 초기화
     else:
-        cnt = 1
-    ans = max(ans, cnt)
-print(ans-1)
+        cnt = 1  # 부호가 다르면 cnt를 1로 초기화
+    ans = max(ans, cnt)  # 최대 길이를 갱신
+
+print(ans)
