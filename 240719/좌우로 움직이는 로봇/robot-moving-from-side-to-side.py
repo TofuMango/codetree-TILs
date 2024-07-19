@@ -1,4 +1,4 @@
-max_space = 1000000
+max_space = 10000000
 # a이동횟수 n, b이동횟수 m 입력받기
 n, m = tuple(map(int, input().split()))
 # A와 B 이동거리 저장할 배열 0으로 초기화
