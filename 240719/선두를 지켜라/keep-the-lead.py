@@ -54,7 +54,7 @@ for _ in range(m):
 # A와 B중 앞서있는 경우 파악하기
 # a가 리더면 1, b가 리더면 2로 관리
 leader, ans = 0, 0
-for i in range(1, a_time+1):
+for i in range(a_time):
     # 지금 a가 b를 앞설때
     if a_distance[i] > b_distance[i]:
         # 기존 리더가 b였다면
