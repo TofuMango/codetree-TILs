@@ -1,8 +1,9 @@
+max_space = 1000000
 # 명령 횟수 각각 입력
 n, m = tuple(map(int, input().split()))
 # a 시간별 이동거리 수를 저장할 배열
-a_distance = [0] * 1000
-b_distance = [0] * 1000
+a_distance = [0] * max_space
+b_distance = [0] * max_space
 # 현재시간상태
 a_time = 0
 # 현재거리상태
@@ -33,7 +34,7 @@ for _ in range(m):
         b_distance[b_time] += b_now_dis
         b_time += 1
 
-ans = [0] * 1000
+ans = [0] * max_space
 for i in range(a_time):
     if a_distance[i] > b_distance[i]:
         ans[i] = 'A'
