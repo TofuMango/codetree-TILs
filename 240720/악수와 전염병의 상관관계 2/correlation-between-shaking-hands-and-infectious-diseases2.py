@@ -22,7 +22,7 @@ for t, x, y in handShake:
         if infected[y] == 0:
             # y를 감염시키고
             infected[y] = 1
-            # y의 감염 가능횟수 체크하고
+            # y의 감염 가능횟수 초기화하고
             cnt[y] = K
             # x의 감염 가능횟수는 차감하기
             cnt[x] -= 1
@@ -37,7 +37,7 @@ for t, x, y in handShake:
         if infected[x] == 0:
             # x를 감염시키고
             infected[x] = 1
-            # x의 감염 가능횟수 체크하고
+            # x의 감염 가능횟수 초기화하고
             cnt[x] = K
             # y의 감염 가능횟수는 차감하기
             cnt[y] -= 1
