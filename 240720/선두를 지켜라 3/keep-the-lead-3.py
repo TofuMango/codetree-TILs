@@ -1,5 +1,5 @@
 # 최대시간 설정
-max_T = 1000
+max_T = 1000000
 # 입력
 N, M = tuple(map(int, input().split()))
 posA, posB = [0] * (max_T + 1), [0] * (max_T + 1)
