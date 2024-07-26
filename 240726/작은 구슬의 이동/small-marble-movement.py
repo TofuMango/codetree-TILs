@@ -16,7 +16,7 @@ mapping = {
     'L' : 3
 }
 d = mapping[d]
-# 현재 좌표값 조정
+# 현재 좌표값 보정. 1행 시작이 아닌 0행 시작이기때문
 r, c = r-1, c-1
 # 격자 범위 설정
 def arr_range(x, y):
