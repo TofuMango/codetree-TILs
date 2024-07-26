@@ -24,7 +24,8 @@ for _ in range(n):
     s = int(s)
     d = mapping[d]
     for _ in range(s):
-        x += dx[d], y += dy[d]
+        x += dx[d]
+        y += dy[d]
         t += 1  # t 증가
         if x == 0 and y == 0 and not check:
             check = True
