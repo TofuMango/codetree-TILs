@@ -11,26 +11,21 @@ dx, dy = [0,1,0,-1], [1,0,-1,0]
 x, y = 0,0
 dir_num = 0
 # 처음위치는 1시작
-num = 1
-ans[x][y] = num
+ans[x][y] = 1
 # 범위설정
 def arr_range(x, y):
     return x>=0 and y>=0 and x<n and y<m
-# 숫자세기
-while True:
+# n*m번 진행. 1은있으니까 2부터~16까지
+for i in range(2, n * m + 1):
+    # 현재 기준 다음 위치값 계산
     nx, ny = x+dx[dir_num], y+dy[dir_num]
     # 범위 밖이거나 한번 지나갔던 곳일때 90도 회전
     if not arr_range(nx, ny) or ans[nx][ny] != 0:
         dir_num = (dir_num+1)%4
-    # 좌표 이동시키기
+    # 좌표 이동시키고 값채워넣기
     x, y = x+dx[dir_num], y+dy[dir_num]
-    # 번호를 1증가시키고
-    num += 1
-    # ans 배열에 저장
-    ans[x][y] = num
-    # 숫자가 좌표평면 수와 일치하면 반복문 빠져나옴
-    if num == n*m:
-        break
+    ans[x][y] = i
+    
 # 출력
 for row in range(n):
     for col in range(m):
