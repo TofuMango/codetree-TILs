@@ -15,7 +15,7 @@ num = 1
 ans[0][0] = num
 # 범위설정
 def arr_range(x, y):
-    return x>=0 and y>=0 and x<n and y<n
+    return x>=0 and y>=0 and x<n and y<m
 # 숫자세기
 while True:
     nx, ny = x+dx[dir_num], y+dy[dir_num]
