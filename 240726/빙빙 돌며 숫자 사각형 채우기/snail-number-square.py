@@ -19,16 +19,15 @@ def arr_range(x, y):
 # 숫자세기
 while True:
     nx, ny = x+dx[dir_num], y+dy[dir_num]
-    # 범위 밖이거나 한번 지나갔던 곳일때
+    # 범위 밖이거나 한번 지나갔던 곳일때 90도 회전
     if not arr_range(nx, ny) or ans[nx][ny] != 0:
         dir_num = (dir_num+1)%4
-    else:
-        # 좌표 이동시키기
-        x, y = x+dx[dir_num], y+dy[dir_num]
-        # 번호를 1증가시키고
-        num += 1
-        # ans 배열에 저장
-        ans[x][y] = num
+    # 좌표 이동시키기
+    x, y = x+dx[dir_num], y+dy[dir_num]
+    # 번호를 1증가시키고
+    num += 1
+    # ans 배열에 저장
+    ans[x][y] = num
     # 숫자가 좌표평면 수와 일치하면 반복문 빠져나옴
     if num == n*m:
         break
