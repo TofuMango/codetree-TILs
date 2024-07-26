@@ -27,6 +27,5 @@ while t >= 0:
         d = 3 - d
     # 구슬 움직이기
     r, c = r + dx[d], c + dy[d]
-    print(r, c)
     t -= 1
 print(r, c)
