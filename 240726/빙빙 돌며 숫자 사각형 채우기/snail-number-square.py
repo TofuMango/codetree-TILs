@@ -12,7 +12,7 @@ x, y = 0,0
 dir_num = 0
 # 처음위치는 1시작
 num = 1
-ans[0][0] = num
+ans[x][y] = num
 # 범위설정
 def arr_range(x, y):
     return x>=0 and y>=0 and x<n and y<m
