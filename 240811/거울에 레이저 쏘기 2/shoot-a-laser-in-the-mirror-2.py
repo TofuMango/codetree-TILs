@@ -9,7 +9,7 @@ map = [
 start_num = int(input())
 # 맵 범위 정의
 def in_range(x, y):
-    return x>=0 and y>=0 and x<n, y<n
+    return x>=0 and y>=0 and x<n and y<n
 # 시작위치 구하는 함수정의
 def primary(num):
     # 맵 위쪽에서 시작
@@ -34,16 +34,16 @@ def move(x,y,next_dir):
     # 아래 왼 위 오 순서
     dx, dy = [1,0,-1,0], [0,-1,0,1]
     nx, ny = x+dx[next_dir], y+dy[next_dir]
-    return mx, ny, next_dir 
+    return nx, ny, next_dir 
 
 # 시뮬레이션 
 def simulation(x,y,move_dir):
+    # 이동횟수는 초기값은 0
+    move_num = 0
     # 맵 밖을 벗어나면 종료
     while in_range(x,y):
-        # 이동횟수는 초기값은 0
-        move_num = 0
         # (x,y) 위치의 거울이 /방향일때 처리
-        if map[x][y] = "/":
+        if map[x][y] == "/":
             # 현재 방향에서 1 xor해주면 다음 위치 결정가능
             x, y, move_dir = move(x, y, move_dir ^ 1)
         # 거울이 \ 방향일때 처리
@@ -51,7 +51,7 @@ def simulation(x,y,move_dir):
             x, y, move_dir = move(x, y, 3-move_dir)
         # 이동횟수 1증가
         move_num+=1
-return move_num
+    return move_num
 
 # 시작 위치 및 방향 구하기
 x, y, move_dir = primary(start_num)
