@@ -10,6 +10,6 @@ min_dist = INT_MAX
 for i in range(n):
     sum_dist = 0
     for j in range(n):
-        sum_diff += abs(j-i) * info[j]
+        sum_dist += abs(j-i) * info[j]
     min_dist = min(min_dist, sum_dist)
 print(min_dist)
