@@ -16,11 +16,11 @@ for i in range(1, n):
             for l in range(j + 1, m - 1):
                 # 그 중 색깔이 전부 달라지는 경우에만 개수를 세줌
                 # 현재위치인 0,0 와 첫번째 중간위치 (i,j) 색이 다르고
-                if grid[0][0] != grid[i][j] and \
                 # 첫번째 중간위치(i,j)와 두번째 중간위치(k,l) 색이 다르며
-                   grid[i][j] != grid[k][l] and \
                 # 두번째 중간위치와 마지막 위치의 색이 다를때만 cnt += 1
                 # n-1해준건 인덱스 보정임
+                if grid[0][0] != grid[i][j] and \
+                   grid[i][j] != grid[k][l] and \
                    grid[k][l] != grid[n - 1][m - 1]:
                     cnt += 1
                         
