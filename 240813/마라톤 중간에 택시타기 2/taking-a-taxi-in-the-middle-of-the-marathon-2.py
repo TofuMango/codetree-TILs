@@ -20,7 +20,7 @@ for i in range(1, n - 1):
 			continue
 		dist += abs(arr[prev_idx][0] - arr[j][0]) + abs(arr[prev_idx][1] - arr[j][1])
 	    # 이전 인덱스 j를 저장   
-		prev_idx = j
+        prev_idx = j
 	
 	ans = min(ans, dist)
 
