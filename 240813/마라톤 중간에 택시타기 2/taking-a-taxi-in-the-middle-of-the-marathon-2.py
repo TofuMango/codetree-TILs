@@ -26,7 +26,6 @@ for i in range(1, n - 1):
 
 # 출력
 print(ans)
-# import sys
 # INT_MAX = sys.maxsize
 # min_total = INT_MAX
 # n = int(input())
