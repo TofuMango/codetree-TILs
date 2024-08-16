@@ -1,13 +1,21 @@
-a = input().strip()  # 입력받은 문자열에서 공백 제거
-open_count = 0
-pair_count = 0
+def count_pairs(s):
+    open_positions = []
+    pair_count = 0
+    
+    # 연속한 여는 괄호의 위치 찾기
+    for i in range(len(s) - 1):
+        if s[i] == '(' and s[i + 1] == '(':
+            open_positions.append(i)
+    
+    # 연속한 닫는 괄호의 개수 세기
+    for start in open_positions:
+        for j in range(start + 2, len(s) - 1):
+            if s[j] == ')' and s[j + 1] == ')':
+                pair_count += 1
 
-for char in a:
-    if char == '(':
-        open_count += 1  # 여는 괄호를 세기
-    elif char == ')':
-        if open_count > 1:  # 여는 괄호가 있을 때만 쌍을 만들 수 있음
-            pair_count += 1  # 쌍을 하나 찾음
-            open_count -= 1  # 여는 괄호 하나 제거
+    return pair_count
 
-print(pair_count)
+# 입력 받기
+input_string = input().strip()
+result = count_pairs(input_string)
+print(result)
