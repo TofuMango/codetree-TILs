@@ -6,7 +6,7 @@ n = int(input())
 
 # 숫자를 리스트로 저장 (자릿수 순서로)
 arr = [
-    list(map(int, str(input().split()[::-1])))  # 입력받은 숫자를 뒤집어서 자릿수 순서로 저장
+    list(map(int, str(input().strip()[::-1])))  # 입력받은 숫자를 뒤집어서 자릿수 순서로 저장
     for _ in range(n)
 ]
 
