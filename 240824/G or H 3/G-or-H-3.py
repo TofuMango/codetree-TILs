@@ -16,7 +16,7 @@ for i in range(MAX_NUM - k + 1):
     for j in range(i, i + k + 1):
         sum_interval += arr[j]
 
-    # 최댓값을 구합니다.
+    # 최댓값 구하기
     max_sum = max(max_sum, sum_interval)
                         
 print(max_sum)
