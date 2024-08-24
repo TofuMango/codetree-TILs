@@ -1,4 +1,4 @@
-max_place = 100
+max_place = 10000
 # 입력
 n, k = map(int, input().split())
 people = [
