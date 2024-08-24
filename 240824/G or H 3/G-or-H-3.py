@@ -1,4 +1,4 @@
-max_place = 100000
+max_place = 10000
 # 입력
 n, k = map(int, input().split())
 people = [
@@ -19,6 +19,8 @@ for elem1, elem2 in people:
         elem2 = 0
     arr[elem1] = elem2
     last = max(elem1, last)
+if k >= last:
+    last = k
 # 사진 크기별 최대 점수 구하는 로직
 ans = 0
 for i in range(1, last - k + 2):
