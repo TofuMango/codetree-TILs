@@ -8,6 +8,7 @@ def diff(i,j,k,l):
     sum3 = sum(arr) - sum1 - sum2
     if sum1 != sum2 and sum2 != sum3 and sum1 != sum3:
         # 세팀의 차이 중 최댓값 리턴
+        # 최대능력팀-최소능력팀 능력차이가 최소인걸구해야하니까..
         ret = abs(sum1-sum2)
         ret = max(ret, abs(sum2-sum3))
         ret = max(ret, abs(sum3-sum1))
