@@ -1,4 +1,4 @@
-max_xy = 40000
+max_xy = 40001
 n = int(input())
 spots = [
     tuple(map(int, input().split()))
