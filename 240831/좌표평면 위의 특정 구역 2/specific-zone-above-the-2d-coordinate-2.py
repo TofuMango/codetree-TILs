@@ -1,4 +1,5 @@
-max_xy = 40001
+import sys
+max_xy = sys.maxsize
 n = int(input())
 spots = [
     tuple(map(int, input().split()))
